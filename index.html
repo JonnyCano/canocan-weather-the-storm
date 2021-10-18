@@ -4,15 +4,91 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+    <script src="./assets/js/script.js" defer></script>
     <title>CanoCan weather the storm.</title>
     <link rel="shortcut icon" type="image/png" href="./assets/image/canocan_3000.png">
-
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-
 </head>
 <body>
-    <h1>Cano Can weather the storm period.</h1>
-    <script src="./assets/js/script.js"></script>
+    <header>
+        <h1>Weather Dashboard</h1>
+    </header>
+
+    <main>
+
+        <div class="row">
+            <div class="container col s12 m3 l3">    
+                <div class="grey lighten-3" id="left-form">
+                    <h5 id="city-search-header">Search for a City:</h5>
+                    <form class="city-form">
+                        <div class="input-field">
+                            <input class="validate" type="text" name="city" id="city" required />
+                        </div>
+                        <div class="landing-button">
+                            <button id="signup-submit-button" class="btn light-blue waves-effect waves-light ml4" onclick="cityWeatherSearch(event)">Search
+                                <i class="material-icons right">send</i>
+                            </button>
+                        </div>
+                    </form>
+                    <div class="divider"></div>
+                    <ul class="searched-cities">
+                    </ul>
+                </div>
+            </div>
+
+            <div class="container col s12 m9 l9">
+                <div id="right-data" class="">
+                    <ul id="theCurrentWeatherListEl">
+                        <li class="city-name-date-and-icon"><span id="city-name-value"></span><span id="date-value"></span><span><img class="current-weather-icon" src="" alt=""></img></span></li>
+                        <li class="current-temperature">Temp: <span id="current-temperature-value"></span> °F</li>
+                        <li class="current-wind-condition">Wind: <span id="wind-forecast-value"></span></li>
+                        <li class="current-humidity">Humidity: <span id="current-humidity-value"></span></li>
+                        <li class="current-uv-index">UV Index: <span id="current-uv-index-value"></span></li>
+                    </ul>
+                </div>
+
+                <div class="container">
+                    <div class="col s2">
+                        <div class="card small light-blue">
+                            <!-- Card Content -->
+                        </div>
+                    </div>
+                    <div class="col s2">
+                        <div class="card small light-blue">
+                            <!-- Card Content -->
+                        </div>
+                    </div>
+                    <div class="col s2">
+                        <div class="card small light-blue">
+                            <!-- Card Content -->
+                        </div>
+                    </div>
+                    <div class="col s2">
+                        <div class="card small light-blue">
+                            <!-- Card Content -->
+                        </div>
+                    </div>
+                    <div class="col s2">
+                        <div class="card small light-blue">
+                            <!-- Card Content -->
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="page-footer light-blue">
+        <div class="row">
+            <p class="col s3" id="contribution">Made with ❤️ by Jonny</p>
+            <p class="col s6"></p>
+            <p class="col s3" id="copyright">&copy; CanoCan, INC</p>
+        </div>
+    </footer>
 </body>
 </html>
