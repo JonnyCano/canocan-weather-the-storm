@@ -18,13 +18,13 @@
 
     <main>
 
-        <div class="row">
+        <div class="row no-margin">
             <div class="container col s12 m3 l3">    
-                <div class="grey lighten-3" id="left-form">
+                <div class="" id="left-form">
                     <h5 id="city-search-header">Search for a City:</h5>
                     <form class="city-form">
                         <div class="input-field">
-                            <input class="validate" type="text" name="city" id="city" required />
+                            <input class="validate" placeholder="city" type="text" name="city" id="city" required />
                         </div>
                         <div class="landing-button">
                             <button id="signup-submit-button" class="btn light-blue waves-effect waves-light ml4" onclick="cityWeatherSearch(event)">Search
@@ -34,6 +34,11 @@
                     </form>
                     <div class="divider"></div>
                     <ul class="searched-cities">
+                        <li class="hidden"><input onclick="myFunction(event)" class="hidden white-text grey lighten-1" type="text" name="city" /></li>
+                        <li class="hidden"><input onclick="myFunction(event)" class="hidden white-text grey lighten-1" type="text" name="city" /></li>
+                        <li class="hidden"><input onclick="myFunction(event)" class="hidden white-text grey lighten-1" type="text" name="city" /></li>
+                        <li class="hidden"><input onclick="myFunction(event)" class="hidden white-text grey lighten-1" type="text" name="city" /></li>
+                        <li class="hidden"><input onclick="myFunction(event)" class="hidden white-text grey lighten-1" type="text" name="city" /></li>
                     </ul>
                 </div>
             </div>
@@ -48,39 +53,72 @@
                         <li class="current-uv-index">UV Index: <span id="current-uv-index-value"></span></li>
                     </ul>
                 </div>
-
-                <div class="container">
-                    <div class="col s2">
-                        <div class="card small light-blue">
-                            <!-- Card Content -->
-                        </div>
-                    </div>
-                    <div class="col s2">
-                        <div class="card small light-blue">
-                            <!-- Card Content -->
-                        </div>
-                    </div>
-                    <div class="col s2">
-                        <div class="card small light-blue">
-                            <!-- Card Content -->
-                        </div>
-                    </div>
-                    <div class="col s2">
-                        <div class="card small light-blue">
-                            <!-- Card Content -->
-                        </div>
-                    </div>
-                    <div class="col s2">
-                        <div class="card small light-blue">
-                            <!-- Card Content -->
-                        </div>
-                    </div>
-
-                </div>
-
             </div>
         </div>
 
+        <div class="row no-margin">
+            <div class="container col s12 m3 l3"></div>
+            <div class="container col s12 m9 l9">
+                <div class="grid-container">
+                    <div class="item1">
+                        <div class="card">
+                            <ul id="theCurrentWeatherListEl-1">
+                                <li class="city-name-date-and-icon-1"><span id="city-name-value-1"></span><span id="date-value"></span><span><img class="current-weather-icon" src="" alt=""></img></span></li>
+                                <li class="current-temperature-1">Temp: <span id="current-temperature-value-1"></span> °F</li>
+                                <li class="current-wind-condition-1">Wind: <span id="wind-forecast-value-1"></span></li>
+                                <li class="current-humidity-1">Humidity: <span id="current-humidity-value-1"></span></li>
+                                <li class="current-uv-index-1">UV Index: <span id="current-uv-index-value-1"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="item2">
+                        <div class="card">
+                            <ul id="theCurrentWeatherListEl-2">
+                                <li class="city-name-date-and-icon-2"><span id="city-name-value-2"></span><span id="date-value"></span><span><img class="current-weather-icon" src="" alt=""></img></span></li>
+                                <li class="current-temperature-2">Temp: <span id="current-temperature-value-2"></span> °F</li>
+                                <li class="current-wind-condition-2">Wind: <span id="wind-forecast-value-2"></span></li>
+                                <li class="current-humidity-2">Humidity: <span id="current-humidity-value-2"></span></li>
+                                <li class="current-uv-index-2">UV Index: <span id="current-uv-index-value-2"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="item3">
+                        <div class="card">
+                            <ul id="theCurrentWeatherListEl-3">
+                                <li class="city-name-date-and-icon-3"><span id="city-name-value-3"></span><span id="date-value"></span><span><img class="current-weather-icon" src="" alt=""></img></span></li>
+                                <li class="current-temperature-3">Temp: <span id="current-temperature-value-3"></span> °F</li>
+                                <li class="current-wind-condition-3">Wind: <span id="wind-forecast-value-3"></span></li>
+                                <li class="current-humidity-3">Humidity: <span id="current-humidity-value-3"></span></li>
+                                <li class="current-uv-index-3">UV Index: <span id="current-uv-index-value-3"></span></li>
+                            </ul>
+                        </div>
+                    </div>  
+                    <div class="item4">
+                        <div class="card">
+                            <ul id="theCurrentWeatherListEl-4">
+                                <li class="city-name-date-and-icon-4"><span id="city-name-value-4"></span><span id="date-value"></span><span><img class="current-weather-icon" src="" alt=""></img></span></li>
+                                <li class="current-temperature-4">Temp: <span id="current-temperature-value-4"></span> °F</li>
+                                <li class="current-wind-condition-4">Wind: <span id="wind-forecast-value-4"></span></li>
+                                <li class="current-humidity-4">Humidity: <span id="current-humidity-value-4"></span></li>
+                                <li class="current-uv-index-4">UV Index: <span id="current-uv-index-value-4"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="item5">
+                        <div class="card">
+                            <ul id="theCurrentWeatherListEl-5">
+                                <li class="city-name-date-and-icon-5"><span id="city-name-value-5"></span><span id="date-value"></span><span><img class="current-weather-icon" src="" alt=""></img></span></li>
+                                <li class="current-temperature-5">Temp: <span id="current-temperature-value-5"></span> °F</li>
+                                <li class="current-wind-condition-5">Wind: <span id="wind-forecast-value-5"></span></li>
+                                <li class="current-humidity-5">Humidity: <span id="current-humidity-value-5"></span></li>
+                                <li class="current-uv-index-5">UV Index: <span id="current-uv-index-value-5"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
     </main>
 
     <footer class="page-footer light-blue">

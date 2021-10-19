@@ -30,6 +30,10 @@ header {
     /* border: red solid 3px; */
 }
 
+.no-margin {
+    margin-bottom: 0;
+}
+
 #city-search-header {
     font-weight: 800;
     text-align: center;
@@ -57,13 +61,55 @@ h1 {
     border: whitesmoke solid 3px;
 }
 
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'header menu main right footer';
+    grid-gap: 5px;
+    /* background-color: #2196F3; */
+    padding: 10px;
+    transform: translateY(20px);
+}
+
+.grid-container > div {
+    background-color: rgba(255, 255, 255, 0.0);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+
+.validate {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
 .landing-button {
     text-align: center;
+}
+
+.card {
+    width: 20px;
 }
 
 #right-data {
     margin-top: 0;
     border: whitesmoke solid 3px;
+}
+
+.red {
+    border: red solid 3px;
 }
 
 .city-name-date-and-icon {
@@ -102,4 +148,16 @@ footer {
 #copyright {
     /* border: red solid 3px; */
     text-align: right;
+}
+
+@media only screen and (min-width: 1200px) {
+    html {
+        font-size: 10px
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    html {
+        line-height: 1;
+    }
 }

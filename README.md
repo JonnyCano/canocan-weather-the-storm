@@ -6,9 +6,11 @@ A website to help any and all travels, family trips, sky dive or maybe a date go
 ## Built With
 * HTML
 * CSS
+* JavaScript
+* Materialize CDN
 
 ## Website
-https://JonnyCano.github.io/canocan-weather-the-storm/
+https://jonnycano.github.io/canocan-weather-the-storm/
 
 ##Contribution
 Made with ❤️ by Jonny

@@ -9,10 +9,12 @@ let currentWindSpeedEl = document.querySelector('#wind-forecast-value')
 let currentHumidityEl = document.querySelector('#current-humidity-value')
 let currentUVIndexEl = document.querySelector('#current-uv-index-value')
 
-function myfunction() {
-    let working = "CanoCan weather the storm"
+function myFunction(event) {
+    event.preventDefault()
 
-    console.log(working)
+    searchInput.value = event.target.value
+
+    cityWeatherSearch(event)
 }
 
 // get the form input
@@ -153,5 +155,3 @@ function createSearchedCitiesButtons(city) {
 
     console.log(searchedCities)
 }
-
-myfunction()
